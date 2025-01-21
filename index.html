@@ -10,6 +10,12 @@
 <body>
   <header class="header">
     <div class="container header__container">
+      <div class="header__logo">
+        <img src="assets/img/logo.png" alt="Logo" class="header__logo-img">
+      </div>
+      <button class="header__menu-toggle" aria-label="Toggle navigation">
+        &#9776; <!-- Unicode voor het hamburgermenu -->
+      </button>
       <nav class="header__nav">
         <ul class="nav nav__container">
           <li class="nav__item"><a href="#" class="item__link">Succes</a></li>
@@ -18,65 +24,75 @@
           <li class="nav__item"><a href="#" class="item__link">Vlucht naar Parijs</a></li>
         </ul>
       </nav>
-      <div class="header__logo">
-        <img src="assets/img/" alt="Logo" class="header__logo-img">
-      </div>
     </div>
   </header>
 
+
   <section class="intro">
+    <div class="intro__image">
+      <img src="assets/img/header-plantijn.png" alt="Header Image" class="intro__img">
+    </div>
     <div class="container intro__container">
-      <h1 class="intro__title">Het verhaal van Christoffel Plantijn</h1>
-      <div class="intro__image">
-        <img src="assets/img/" alt="Header Image" class="intro__img">
-      </div>
+      <h1 class="intro__title">Het verhaal van <span class="span-header">Christoffel Plantijn</span></h1>
     </div>
   </section>
 
-  <section class="sub-intro">
-    <div class="container">
-      <h2>Kies een verhaal</h2>
+<section class="sub-intro">
+  <div class="container">
+    <h2 class="sub-intro__title">Kies een verhaal</h2>
+    <div class="sub-intro__grid">
       <div class="story__item">
-        <img src="assets/img/" alt="Story 1" class="story__img">
-        <p class="story__body">Kies een boek die Moretus aan zijn zoon Gaspar moet voorlezen. Ontdek samen het verhaal van Christoffel Plantijn.</p>
+        <img src="assets/img/boeken.png" alt="Boekenplank" class="story__img">
+        <p class="story__body">
+          Kies een boek die Moretus aan zijn zoon Gaspar moet voorlezen. Ontdek samen het verhaal van Christoffel
+          Plantijn.
+        </p>
       </div>
       <div class="story__item">
-        <img src="assets/img/" alt="pijl" class="pijl__img">
+        <img src="assets/img/pijl.png" alt="Pijl" class="story__img">
         <p class="story__body">Klik op een boek en kies je eerste verhaal.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="gallery">
-    <div class="container">
-      <div class="gallery__item">
-        <img src="assets/img/" alt="lucifer" class="gallery__img">
-        <p class="gallery__caption">Pak de lucifer en laat de kaars branden</p>
-      </div>
-      <div class="gallery__item">
-        <img src="assets/img/" alt="Image 2" class="gallery__img">
-        <p class="gallery__caption">Goed gekozen Balthasar, het is een verhaal over de avonturen van je grootvader. 
-          Steek je nog de kaars aan zodat ik kan beginnen voorlezen.</p> 
-      </div>
-      <div class="gallery__item">
-        <img src="assets/img/" alt="Image 3" class="gallery__img">
-        <p class="gallery__caption">Wat leuk, ik steek snel de kaars aan zodat we kunnen beginnen lezen.</p>
+<section class="gallery">
+  <div class="container">
+    <div class="quote quote-top">
+      <p>Goed gekozen Balthasar, het is een verhaal over de avonturen van je grootvader. <span class="highlight">Steek je
+          nog de kaars aan zodat ik kan beginnen voorlezen.</span></p>
+    </div>
+    <div class="images">
+      <img src="assets/img/moretus.png" alt="Moretus" class="portrait left">
+      <img src="assets/img/balthasar.png" alt="Balthasar" class="portrait right">
+    </div>
+    <div class="quote quote-bottom">
+      <p>Wat leuk, ik steek snel de kaars aan zodat we kunnen beginnen lezen.</p>
+    </div>
+    <div class="interaction">
+      <p>Pak de lucifer en laat de kaars branden</p>
+      <div class="matches">
+        <img src="assets/img/lucifer.png" alt="Lucifer" class="matchstick">
+        <img src="assets/img/kandelaar.png" alt="Kandelaar" class="candlestick">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="torn-paper">
-    <div class="container">
-      <img src="assets/img/" alt="Gescheurd Papier" class="torn-paper__img">
-    </div>
-  </section>
+
+<section class="torn-paper">
+  <div class="container">
+    <img src="assets/img/torn-paper.png" alt="Gescheurd Papier" class="torn-paper__img">
+  </div>
+</section>
+
 
   <section class="chapter1">
     <div class="container">
       <div class="chapter1__images">
-        <img src="assets/img/" alt="Neus" class="chapter1__img">
-        <img src="assets/img/" alt="Inkt tampon" class="chapter1__img">
-        <img src="assets/img/" alt="bladeren" class="chapter1__img">
+        <img src="assets/img/neus.png" alt="Neus" class="chapter1__img">
+        <img src="assets/img/inkttampon.png" alt="Inkt tampon" class="chapter1__img">
+        <img src="assets/img/papier.png" alt="bladeren" class="chapter1__img">
       </div>
       <div class="chapter1__content">
         <h2 class="chapter1__title">De start van een succes</h2>
@@ -91,9 +107,9 @@
         <h3 class="chapter1__interaction__subtitle">Ontdek het eerste boek van plantijn</h3>
         <div class="chapter1__interaction__explanation">
           <p class="chapter1__interaction__body">Veeg met de inkttampon over het blad om de tekst zichtbaar te maken.</p>
-          <img src="assets/img/" alt="pijl" class="torn-paper__img">
+          <img src="assets/img/pijl.png" alt="pijl" class="torn-paper__img">
         </div>
-        <img src="assets/img/" alt="papier" class="torn-paper__img">
+        <img src="assets/img/perkament.png" alt="perkament" class="torn-paper__img">
       </div>
     </div>
   </section>
@@ -246,5 +262,6 @@
       </div>
     </div>
   </footer>
+  <script type="module" src="/main.js"></script>
 </body>
 </html>
