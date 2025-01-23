@@ -1,5 +1,19 @@
 @import url("reset.css");
 
+@font-face {
+  font-family: "GiordanoGold";
+  src: url('../assets/font/GiordanoGold\ Serif.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MartinaPlantijn-Light";
+  src: url('../assets/font/MartinaPlantijn-Light.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,10 +46,27 @@ img,picture {
 
 :root {
 
-  --s0: 0.5rem;
-  --s1: 1rem;
-  --s2: 1.5rem;
-  --s3: 2rem;
+ --space-algemeen: 16px;
+
+  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+  --space-2xs: clamp(0.625rem, 0.625rem + 0vw, 0.625rem);
+  --space-xs: clamp(0.9375rem, 0.9375rem + 0vw, 0.9375rem);
+  --space-s: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+  --space-m: clamp(1.875rem, 1.875rem + 0vw, 1.875rem);
+  --space-l: clamp(2.5rem, 2.5rem + 0vw, 2.5rem);
+  --space-xl: clamp(3.75rem, 3.75rem + 0vw, 3.75rem);
+  --space-2xl: clamp(5rem, 5rem + 0vw, 5rem);
+  --space-3xl: clamp(7.5rem, 7.5rem + 0vw, 7.5rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.3125rem, 0.2163rem + 0.3846vw, 0.625rem);
+  --space-2xs-xs: clamp(0.625rem, 0.5288rem + 0.3846vw, 0.9375rem);
+  --space-xs-s: clamp(0.9375rem, 0.8413rem + 0.3846vw, 1.25rem);
+  --space-s-m: clamp(1.25rem, 1.0577rem + 0.7692vw, 1.875rem);
+  --space-m-l: clamp(1.875rem, 1.6827rem + 0.7692vw, 2.5rem);
+  --space-l-xl: clamp(2.5rem, 2.1154rem + 1.5385vw, 3.75rem);
+  --space-xl-2xl: clamp(3.75rem, 3.3654rem + 1.5385vw, 5rem);
+  --space-2xl-3xl: clamp(5rem, 4.2308rem + 3.0769vw, 7.5rem);
 
   --c-black: #1E1E1E;
   --c-blue: #3C4E6B;
@@ -43,17 +74,28 @@ img,picture {
   --c-yellow: #FFC659;
   --c-yellow-background: #F4E4CA;
   --c-background:#F1ECE6;
+  --c-grey:#E2DED9;
 
   --fs-s: 1.25rem;
   --fs-m: 1.5rem;
   --fs-l: 1.85rem;
   --fs-xl: 2.2rem;
+
+  --fs--2: clamp(0.8rem, 0.889rem + -0.0838vw, 0.8681rem);
+  --fs--1: clamp(1rem, 1.0545rem + -0.0513vw, 1.0417rem);
+  --fs-0: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+  --fs-1: clamp(1.5rem, 1.4808rem + 0.0769vw, 1.5625rem);
+  --fs-2: clamp(1.8rem, 1.7529rem + 0.1885vw, 1.9531rem);
+  --fs-3: clamp(2.16rem, 2.0734rem + 0.3463vw, 2.4414rem);
+  --fs-4: clamp(2.592rem, 2.4505rem + 0.5659vw, 3.0518rem);
+  --fs-5: clamp(3.1104rem, 2.8937rem + 0.8668vw, 3.8147rem);
 }
 
 body {
   background: var(--c-background) url('assets/img/behang.png') repeat;
   color: var(--c-black);
   line-height: 1.6;
+  margin-block: 16px 0;
 }
 
 h1 {
@@ -73,7 +115,7 @@ h3{
 
 p {
   font-size: var(--fs-s);
-  font-family: "Source Serif Pro";
+  font-family: "MartinaPlantijn-Light";
 }
 
 .chapter1,
@@ -86,21 +128,20 @@ p {
   background-color: var(--c-yellow-background);
 }
 
-
-/* .container {
-  width: 90%;
-  margin: 0 auto;
-} */
-
-
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.intro-text{
+text-align: center;
+}
+
 .header__logo-img {
-  height: 50px;
+  max-width: auto;
+  height: 70px;
+  margin-inline: var(--space-algemeen);
 }
 
 .header__menu-toggle {
@@ -112,34 +153,138 @@ p {
   cursor: pointer;
 }
 
-.header__nav {
-  display: flex;
-  gap: 20px;
-}
-
-.nav__item .item__link {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-
-/* Introsectie */
 .intro {
   text-align: center;
+  margin-top: 3rem;
+}
+
+.header__img{
+  max-width: auto;
+  max-height: 400px;
 }
 
 .intro__title {
   color: var(--c-yellow);
+  font-family: "GiordanoGold";
 }
 
-.intro__title span {
+.intro__title-2 {
   color: var(--c-green);
-  font-family: Nautica;
   font-size: 2.8rem;
+  font-family: "nautica", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: -2.5rem;
 }
+
+.sub-intro__title{
+  font-family: "GiordanoGold";
+  color: var(--c-blue);
+  margin-block: 10rem 1rem;
+  margin-inline: var(--space-algemeen);
+  text-align: left;
+}
+
+.story__body{
+  text-align: left;
+  margin-inline: var(--space-algemeen);
+  margin-block: var(--space-m-l);
+}
+
+.intro-pointer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-inline: var(--space-l);
+  margin-block: var(--space-m-l) 100px;
+}
+
+.pointer__img {
+  max-width: auto;
+  height: 40px;
+  transform: scaleY(-1) rotate(-15deg);
+  margin-inline: var(--space-algemeen);
+}
+
+
+.quote {
+  text-align: center;
+  padding: 10px;
+  margin-block: 0 var(--space-l);
+}
+
+.highlight {
+  color: #d18b00;
+  font-weight: bold;
+}
+
+.images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+.interaction {
+  display: grid;
+  grid-template-areas:
+    "lucifer lucifer"
+    "kandelaar kandelaar"
+    ". pijl"
+    ". tekst";
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.lucifer {
+  grid-area: lucifer;
+  align-self: center;
+  justify-self: center;
+}
+
+.kandelaar {
+  grid-area: kandelaar;
+  align-self: start;
+  justify-self: center;
+}
+
+.lucifer__img {
+  max-height: 500px;
+  max-width: auto;
+}
+
+.kandelaar__img {
+  max-height: 500px;
+  max-width: auto;
+}
+
+.pijl__img {
+  grid-area: pijl;
+  max-width: auto;
+  height: 40px;
+  transform: rotate(45deg);
+}
+
+.interaction p {
+  grid-area: tekst;
+  align-self: start;
+  text-align: left;
+}
+
+.matches {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+
+
+
 
 
 
@@ -154,64 +299,226 @@ p {
   .header__menu-toggle {
     display: block;
   }
-}
-
-
-
-.quote {
-  text-align: center;
-  padding: 10px;
-}
-
-.quote-top {
+  
+  .quote-top {
   font-style: italic;
   background-color: var(--c-yellow);
-}
+  }
 
-.quote-bottom {
+  .quote-bottom {
   font-style: italic;
   background-color: var(--c-green);
+  }
 }
 
-.highlight {
-  color: #d18b00;
-  font-weight: bold;
+.chapter1__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
 }
 
-.images {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.chapter1__img {
+  width: 100%;
+  object-fit: cover;
 }
 
-.portrait {
-  width: 45%;
-  max-width: 200px;
+.chapter1__img:nth-child(3) {
+  grid-column: 1 / span 2;
 }
 
-.interaction {
-  text-align: center;
-}
-
-.matches {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
-}
-
-.matchstick,
-.candlestick {
-  width: 60px;
+.neus__img {
+  max-width: 150px;
   height: auto;
 }
 
-.matchstick {
-  align-self: flex-start;
+.inkttampon__img {
+  max-width: 300px;
+  height: auto;
 }
 
-.candlestick {
-  align-self: flex-end;
+.papier__img {
+  max-width: 150px;
+  height: auto;
+}
+
+.chapter1__full-title {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  margin-block: var(--space-2xl) var(--space-m);
+}
+
+.chapter1__title {
+  font-family: "GiordanoGold";
+  text-align: center;
+  color: var(--c-blue);
+}
+
+.decoration-left,
+.decoration-right {
+  width: 40px;
+  height: auto;
+}
+
+.chapter1__body {
+  margin-inline: var(--space-algemeen);
+  margin-block: var(--space-m-l);
+}
+
+.perkament__img {
+  align-items: center;
+  max-width: 300px;
+  height: auto;
+}
+
+
+
+.paper-interaction-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+}
+
+.perkament__img {
+  max-width: 100%;
+  height: auto;
+}
+
+.interaction-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.interaction-content__subtitle {
+  font-family: "GiordanoGold";
+  color: var(--c-blue);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.interaction-content__explanation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.interaction-content__body {
+  margin-block: 0rem 4rem;
+}
+
+.interaction-content__arrow {
+  max-width: 50px;
+  height: auto;
+  animation: bounce 2s infinite;
+}
+
+
+.markt__body{
+  margin-inline: var(--space-l-xl);
+  margin-block: 0px 100px;
+  align-items: left;
+}
+
+.chapter2{
+  margin-block: 0px var(--space-xl);
+}
+
+.chapter2__body {
+  margin-inline: var(--space-algemeen);
+  margin-block: var(--space-m-l);
+}
+
+.soldaten-links__img{
+  margin-block: 0px var(--space-l-xl);
+}
+
+.soldaten__body{
+  margin-inline: var(--space-algemeen);
+  margin-block: var(--space-m-l);
+}
+
+.chapter3__body{
+  margin-inline: var(--space-algemeen);
+  margin-block: var(--space-m-l);
+}
+
+.chapter3__body-2 {
+  margin-inline: var(--space-algemeen);
+  margin-block: var(--space-m-l) var(--space-l-xl);
+}
+
+.chapter4__body{
+  margin-inline: 42px;
+  margin-block: var(--space-m-l);
+}
+
+.chapter4__body-2 {
+  margin-inline: var(--space-algemeen);
+  margin-block: var(--space-m-l);
+}
+
+.footer {
+  padding: 2rem;
+  background-color: var(--c-blue);
+  background-image: url('assets/img/footer-border.svg') no-repeat center;
+  background-size: auto;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer__btn {
+  background: url('assets/img/footer-btn.svg') no-repeat center;
+  background-size: contain;
+  border: none;
+  color: var(--c-grey);
+  font-size: var(--fs-m);
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+
+.footer {
+  text-align: center;
+  color: var(--c-grey);
+}
+
+.footer-info{
+  color: var();
+}
+
+.footer__contact address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+/* Sociale media links */
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer__socials .socials {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__socials .socials li a {
+  display: block;
+  width: 40px;
+  height: 40px;
 }
 
 
@@ -219,3 +526,132 @@ p {
 
 
 
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Verdeel de ruimte in twee gelijke kolommen */
+  gap: 1rem;
+  /* Ruimte tussen de kolommen */
+  align-items: center;
+  /* Verticale uitlijning */
+}
+
+.portrait-left img,
+.portrait-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+@media (min-width: 1280px) {
+
+  body{
+    margin-block: var(--space-algemeen) 0px;
+  }
+
+  .header__container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .header__logo-img {
+    max-width: 100px;
+    max-height: auto;
+  }
+
+  .header__img {
+    margin-top: -2rem;
+    max-height: auto;
+    max-height: 550px;
+  }
+
+  .intro__title {
+    font-size: var(--fs-4);
+  }
+
+  .intro__title-2 {
+    font-size: var(--fs-5);
+    margin-top: -4rem;
+  }
+
+  .nav {
+    display: flex;
+    list-style: none;
+    gap: 200px;
+  }
+
+  .nav__item .nav__link {
+    text-decoration: none;
+    color: var(--c-blue);
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .nav__item .nav__link:hover {
+    color: var(--c-yellow);
+  }
+
+
+
+.sub-intro__grid {
+  display: grid;
+  grid-template-areas:
+    "pointer pointer"
+    "bookshelf intro";
+  grid-template-columns: 2fr 1fr; /* Boeken 2/3, tekst 1/3 */
+  gap: 20px; /* Ruimte tussen items */
+}
+
+.intro-pointer {
+  display: grid; /* Zorgt voor een grid-layout */
+  grid-template-columns: auto 1fr; /* Twee kolommen: 1 voor de afbeelding, 1 voor de tekst */
+  gap: 1rem; /* Ruimte tussen de afbeelding en de tekst */
+  align-items: center; /* Zorgt dat de inhoud verticaal gecentreerd is */
+}
+
+.pointer__img {
+  max-width: 50px; /* Beperkt de grootte van de afbeelding */
+  height: auto; /* Houdt de verhoudingen van de afbeelding */
+}
+
+.pointer__text {
+  font-size: 1rem; /* Tekstgrootte aanpassen */
+  color: #333; /* Kleur van de tekst */
+  margin: 0; /* Verwijdert standaard marges van de paragraaf */
+}
+
+
+.bookshelf {
+  grid-area: bookshelf;
+  text-align: center;
+}
+
+
+
+.intro-text {
+  grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sub-intro__title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.story__body {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+}
