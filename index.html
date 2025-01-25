@@ -11,23 +11,25 @@
 <body>
   <header class="header">
     <div class="header__container">
+      <div class="header__logo">
+        <img src="assets/img/logo.png" alt="Museum Plantin Moretus" class="header__logo-img">
+      </div>
+      <button class="header__menu-toggle" aria-label="Toggle menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
       <nav class="header__nav">
         <ul class="nav">
           <li class="nav__item"><a href="#" class="nav__link">Succes</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Einde</a></li>
-        </ul>
-      </nav>
-      <div class="header__logo">
-        <img src="assets/img/logo.png" alt="Museum Plantin Moretus" class="header__logo-img">
-      </div>
-      <nav class="header__nav">
-        <ul class="nav">
           <li class="nav__item"><a href="#" class="nav__link">Manuscripten</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Parijs</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
 
   <section class="intro">
     <div class="intro__image">
@@ -62,7 +64,7 @@
     <div class="sub-intro__grid">
       <div class="story__item">
         <picture class="story__img">
-          <img sizes="(max-width: 952px) 100vw, 952px" srcset="
+          <img class="story__img" sizes="(max-width: 952px) 100vw, 952px" srcset="
         assets/img/boeken/boeken_lqsvvu_c_scale_w_200.avif 200w,
         assets/img/boeken/boeken_lqsvvu_c_scale_w_343.avif 343w,
         assets/img/boeken/boeken_lqsvvu_c_scale_w_417.avif 417w,
@@ -89,112 +91,170 @@
 
 <section class="gallery">
   <div class="container">
-    <div class="quote quote-top">
-      <p>Goed gekozen Balthasar, het is een verhaal over de avonturen van je grootvader. <span class="highlight">Steek je
-          nog de kaars aan zodat ik kan beginnen voorlezen.</span></p>
-    </div>
-    <div class="images">
-      <picture class="portrait-left">
-        <img sizes="(max-width: 420px) 100vw, 420px" srcset="
-      assets/img/moretus/moretus_znmxac_c_scale_w_200.avif 200w,
-      assets/img/moretus/moretus_znmxac_c_scale_w_313.avif 313w,
-      assets/img/moretus/moretus_znmxac_c_scale_w_397.avif 397w,
-      assets/img/moretus/moretus_znmxac_c_scale_w_420.avif 420w" src="moretus_znmxac_c_scale,w_420.avif" alt="">
-      </picture>
-      <picture class="portrait-right">
-        <img sizes="(max-width: 169px) 100vw, 169px" srcset="
-      assets/img/balthasar/balthasar_g7gp4d_c_scale_w_200.avif 200w,
-      assets/img/balthasar/balthasar_g7gp4d_c_scale_w_169.avif 169w" src="balthasar_g7gp4d_c_scale,w_169.avif" alt="">
-      </picture>
-    </div>
-    <div class="quote quote-bottom">
-      <p>Wat leuk, ik steek snel de kaars aan zodat we kunnen beginnen lezen.</p>
-    </div>
-<section class="interaction">
-  <div class="matches">
-    <picture class="kandelaar">
-      <img class="kandelaar__img" sizes="(max-width: 339px) 100vw, 339px" srcset="
-          assets/img/kandelaar/kandelaar-blauw_xubwtm_c_scale_w_200.avif 200w,
-          assets/img/kandelaar/kandelaar-blauw_xubwtm_c_scale_w_339.avif 339w
-        " src="kandelaar-blauw_xubwtm_c_scale,w_339.avif" alt="Kandelaar" />
-    </picture>
+    <div class="gallery__container">
+      <!-- Quote bovenaan -->
+      <div class="quote quote-top">
+        <p>
+          Goed gekozen Balthasar, het is een verhaal over de avonturen van je grootvader.
+          <span class="highlight">Steek je nog de kaars aan zodat ik kan beginnen voorlezen.</span>
+        </p>
+      </div>
 
-    <picture class="lucifer">
-      <img class="lucifer__img" sizes="(max-width: 1200px) 100vw, 1200px" srcset="
+      <!-- Lucifer -->
+      <picture class="lucifer">
+        <img class="lucifer__img" sizes="(max-width: 1200px) 100vw, 1200px" srcset="
           assets/img/lucifer/lucifer-gekleurd_a23c3v_c_scale_w_200.avif 200w,
           assets/img/lucifer/lucifer-gekleurd_a23c3v_c_scale_w_604.avif 604w,
           assets/img/lucifer/lucifer-gekleurd_a23c3v_c_scale_w_865.avif 865w,
           assets/img/lucifer/lucifer-gekleurd_a23c3v_c_scale_w_1065.avif 1065w,
           assets/img/lucifer/lucifer-gekleurd_a23c3v_c_scale_w_1200.avif 1200w
         " src="lucifer-gekleurd_a23c3v_c_scale,w_1200.avif" alt="Lucifer" />
-    </picture>
+      </picture>
+
+      <!-- Kandelaar -->
+      <picture class="kandelaar">
+        <img class="kandelaar__img" sizes="(max-width: 339px) 100vw, 339px" srcset="
+          assets/img/kandelaar/kandelaar-blauw_xubwtm_c_scale_w_200.avif 200w,
+          assets/img/kandelaar/kandelaar-blauw_xubwtm_c_scale_w_339.avif 339w
+        " src="kandelaar-blauw_xubwtm_c_scale,w_339.avif" alt="Kandelaar" />
+      </picture>
+
+      <div class="portraits">
+        <!-- Portret Moretus -->
+        <picture class="portrait-left">
+          <img
+            sizes="(max-width: 420px) 100vw, 420px"
+            srcset="
+              assets/img/moretus/moretus_znmxac_c_scale_w_200.avif 200w,
+              assets/img/moretus/moretus_znmxac_c_scale_w_313.avif 313w,
+              assets/img/moretus/moretus_znmxac_c_scale_w_397.avif 397w,
+              assets/img/moretus/moretus_znmxac_c_scale_w_420.avif 420w
+            "
+            src="moretus_znmxac_c_scale_w_420.avif"
+            alt="Moretus"
+          />
+        </picture>
+
+        <!-- Portret Balthasar -->
+        <picture class="portrait-right">
+          <img sizes="(max-width: 349px) 100vw, 349px" srcset="
+                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_200.avif 200w,
+                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_289.avif 289w,
+                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_337.avif 337w,
+                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_349.avif 349w" src="balthasar-2-groen_1_pc1d6j_c_scale,w_349.avif"
+            alt="">
+        </picture>
+      </div>
+
+
+      <!-- Boek -->
+      <picture class="boek">
+        <img class="boek__img" sizes="(max-width: 349px) 100vw, 349px" srcset="
+          assets/img/boek/boek_ork7wr_c_scale_w_200.avif 200w,
+          assets/img/boek/boek_ork7wr_c_scale_w_270.avif 270w,
+          assets/img/boek/boek_ork7wr_c_scale_w_331.avif 331w,
+          assets/img/boek/boek_ork7wr_c_scale_w_349.avif 349w
+        " src="boek_ork7wr_c_scale,w_349.avif" alt="Boek" />
+      </picture>
+
+      <!-- Quote onderaan -->
+      <div class="quote quote-bottom">
+        <p>Wat leuk, ik steek snel de kaars aan zodat we kunnen beginnen lezen.</p>
+      </div>
+
+      <div class="gallery-pointer">
+        <img src="assets/img/pijl.png" alt="Pijl" class="gallery-pointer__img">
+        <p class="gallery-pointer__text">Pak de lucifer en laat de kaars branden</p>
+      </div>
+
+      <div class="torn-paper">
+        <img src="assets/img/torn-paper.png" alt="Gescheurd Papier" class="torn-paper__img" />
+      </div>
+
+    </div>
   </div>
-  <img src="assets/img/pijl.png" alt="Pijl" class="pijl__img" />
-  <p>Pak de lucifer en laat de kaars branden</p>
 </section>
 
-<section class="torn-paper">
+
+
+<section class="chapter1 chapter1__container">
   <div class="container">
-    <img src="assets/img/torn-paper.png" alt="Gescheurd Papier" class="torn-paper__img" />
-  </div>
-</section>
+    <header class="title-container">
+      <h2 class="chapter1__title">Het succes</h2>
+    </header>
 
-
-
-  <section class="chapter1">
-    <div class="container">
-      <div class="chapter1__full-title">
-        <img src="assets/img/titel-decoratie-links.png" alt="Neus" class="decoration-left">
-        <h2 class="chapter1__title">het succes</h2>
-        <img src="assets/img/titel-decoratie-rechts.png" alt="Neus" class="decoration-left">
-      </div>
-      <div class="chapter1__content">
-        <p class="chapter1__body">De geur van inkt en vers papier vulde de lucht in de kleine werkplaats in Antwerpen. Het was 1555, en Plantijn had al
-        zijn spaargeld geïnvesteerd in de oprichting van zijn drukkerij, de Officina Plantiniana. Hij wist dat het een riskante
-        onderneming was, maar zijn hart klopte vol hoop en ambitie.</p>
-        <div class="chapter1__images">
-          <img src="assets/img/neus.png" alt="Neus" class="chapter1__img neus__img">
-          <img src="assets/img/inkttampon.png" alt="Inkt tampon" class="chapter1__img inkttampon__img">
-          <img src="assets/img/papier.png" alt="bladeren" class="chapter1__img papier__img">
-        </div>
-          <p class="chapter1__body">Zijn eerste opdracht was een bescheiden boek, een verzameling Latijnse teksten. Hij werkte dag en nacht, perfectioneerde
-          elke pagina en controleerde elk detail. Toen het werk af was, bracht hij het naar een welgestelde koopman op de Grote
-          Markt.</p>
+    <div class="chapter1__content">
+      <div class="chapter1__text-grid">
+        <p class="chapter1__body">
+          De geur van inkt en vers papier vulde de lucht in de kleine werkplaats in Antwerpen. Het was 1555, en Plantijn
+          had al zijn spaargeld geïnvesteerd in de oprichting van zijn drukkerij, de Officina Plantiniana. Hij wist dat
+          het een riskante onderneming was, maar zijn hart klopte vol hoop en ambitie.
+        </p>
       </div>
 
+      <div class="chapter1__image-grid">
+        <img src="assets/img/neus.png" alt="Illustratie van een neus" class="chapter1__img neus__img">
+          <div>
+            
+          </div>
+        <img src="assets/img/inkttampon.png" alt="Illustratie van een inkt tampon"
+          class="chapter1__img inkttampon__img">
+        <img src="assets/img/papier.png" alt="Illustratie van bladeren papier" class="chapter1__img papier__img">
+      </div>
+
+      <div class="chapter1__text-grid">
+        <p class="chapter1__body chapter1__body-2">
+          Zijn eerste opdracht was een bescheiden boek, een verzameling Latijnse teksten. Hij werkte dag en nacht,
+          perfectioneerde elke pagina en controleerde elk detail. Toen het werk af was, bracht hij het naar een
+          welgestelde koopman op de Grote Markt.
+        </p>
+      </div>
+    </div>
+
+    
       <div class="paper-interaction-container">
         <div class="perkament">
-          <img src="assets/img/perkament.png" alt="perkament" class="perkament__img">
+          <img src="assets/img/perkament.png" alt="Illustratie van een stuk perkament" class="perkament__img">
         </div>
+          <div class="pijl-container">
+            <img src="assets/img/pijl.png" alt="Illustratie van een pijl" class="interaction-content__arrow">
+          </div>
         <div class="interaction-content">
           <h3 class="interaction-content__subtitle">Ontdek het eerste boek van Plantijn</h3>
           <div class="interaction-content__explanation">
             <p class="interaction-content__body">
               Veeg met de inkttampon over het blad om de tekst zichtbaar te maken.
             </p>
-            <img src="assets/img/pijl.png" alt="pijl" class="interaction-content__arrow">
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+
+
 
   <section class="markt">
-    <div class="container">
+    <div class="markt-container">
       <div class="markt__section">
-        <p class="markt__body">Meester Plantijn, ik bewonder je werk. Dit is van een zeldzame kwaliteit. Ik voorspel dat jouw
+        <p class="markt__body">
+          Meester Plantijn, ik bewonder je werk. Dit is van een zeldzame kwaliteit. Ik voorspel dat jouw
           werk niet onopgemerkt zal blijven.
         </p>
-        <img src="assets/img/markt.png" alt="markt" class="chapter1__img">
+        <img src="assets/img/markt.png" alt="markt" class="markt__img">
       </div>
+    </div>
   </section>
+
 
   <section class="chapter2">
     <div class="container">
       <div class="chapter2__front__images">
-        <img src="assets/img/wolken.png" alt="wolken" class="chapter2__img">
-        <img src="assets/img/bliksem.png" alt="bliksem" class="chapter2__img">
+        <img src="assets/img/wolken.png" alt="wolken" class="wolken__img">
+        <img src="assets/img/bliksem.png" alt="bliksem" class="bliksem__img">
       </div>
       <div class="chapter2__section">
-        <img src="assets/img/antwerpen.png" alt="antwerpen" class="chapter2__img">
+        <img src="assets/img/antwerpen.png" alt="antwerpen" class="antwerpen__img">
       </div>
       <div class="chapter1__full-title">
         <img src="assets/img/titel-decoratie-links.png" alt="Neus" class="decoration-left">
@@ -288,14 +348,26 @@
 
   <section class="afsluit">
     <div class="container">
-      <div class="Balthasar">
-        <img src="assets/img/balthasar.png" alt="Balthasar" class="balthasar__img">
-        <p class="gallery__caption">Wat leuk, ik steek snel de kaars aan zodat we kunnen beginnen lezen.</p>
-      </div>
-      <div class="Moretus">
-        <img src="assets/img/moretus.png" alt="Moretus" class="moretus__img">
-        <p class="gallery__caption">Goed gekozen Balthasar, het is een verhaal over de avonturen van je grootvader.
-          Steek je nog de kaars aan zodat ik kan beginnen voorlezen.</p>
+      <div class="portraits">
+        <!-- Portret Moretus -->
+        <picture class="portrait-left">
+          <img sizes="(max-width: 420px) 100vw, 420px" srcset="
+                    assets/img/moretus/moretus_znmxac_c_scale_w_200.avif 200w,
+                    assets/img/moretus/moretus_znmxac_c_scale_w_313.avif 313w,
+                    assets/img/moretus/moretus_znmxac_c_scale_w_397.avif 397w,
+                    assets/img/moretus/moretus_znmxac_c_scale_w_420.avif 420w
+                  " src="moretus_znmxac_c_scale_w_420.avif" alt="Moretus" />
+        </picture>
+      
+        <!-- Portret Balthasar -->
+        <picture class="portrait-right">
+          <img sizes="(max-width: 349px) 100vw, 349px" srcset="
+                                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_200.avif 200w,
+                                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_289.avif 289w,
+                                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_337.avif 337w,
+                                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_349.avif 349w"
+            src="balthasar-2-groen_1_pc1d6j_c_scale,w_349.avif" alt="">
+        </picture>
       </div>
       <div class="gallery__item">
         <p class="gallery__caption">En wat er hierna gebeurde, is voor een volgende keer, Nu is het bedtijd.</p>
