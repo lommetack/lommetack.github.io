@@ -92,7 +92,6 @@
 <section class="gallery">
   <div class="container">
     <div class="gallery__container">
-      <!-- Quote bovenaan -->
       <div class="quote quote-top">
         <p>
           Goed gekozen Balthasar, het is een verhaal over de avonturen van je grootvader.
@@ -100,9 +99,8 @@
         </p>
       </div>
 
-      <!-- Lucifer -->
       <picture class="lucifer">
-        <img class="lucifer__img" sizes="(max-width: 1200px) 100vw, 1200px" srcset="
+        <img class="lucifer__img" id="lucifer" sizes="(max-width: 1200px) 100vw, 1200px" srcset="
           assets/img/lucifer/lucifer-gekleurd_a23c3v_c_scale_w_200.avif 200w,
           assets/img/lucifer/lucifer-gekleurd_a23c3v_c_scale_w_604.avif 604w,
           assets/img/lucifer/lucifer-gekleurd_a23c3v_c_scale_w_865.avif 865w,
@@ -111,16 +109,14 @@
         " src="lucifer-gekleurd_a23c3v_c_scale,w_1200.avif" alt="Lucifer" />
       </picture>
 
-      <!-- Kandelaar -->
       <picture class="kandelaar">
-        <img class="kandelaar__img" sizes="(max-width: 339px) 100vw, 339px" srcset="
+        <img class="kandelaar__img" id="kandelaar" sizes="(max-width: 339px) 100vw, 339px" srcset="
           assets/img/kandelaar/kandelaar-blauw_xubwtm_c_scale_w_200.avif 200w,
           assets/img/kandelaar/kandelaar-blauw_xubwtm_c_scale_w_339.avif 339w
         " src="kandelaar-blauw_xubwtm_c_scale,w_339.avif" alt="Kandelaar" />
       </picture>
 
       <div class="portraits">
-        <!-- Portret Moretus -->
         <picture class="portrait-left">
           <img
             sizes="(max-width: 420px) 100vw, 420px"
@@ -135,7 +131,6 @@
           />
         </picture>
 
-        <!-- Portret Balthasar -->
         <picture class="portrait-right">
           <img sizes="(max-width: 349px) 100vw, 349px" srcset="
                   assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_200.avif 200w,
@@ -146,8 +141,6 @@
         </picture>
       </div>
 
-
-      <!-- Boek -->
       <picture class="boek">
         <img class="boek__img" sizes="(max-width: 349px) 100vw, 349px" srcset="
           assets/img/boek/boek_ork7wr_c_scale_w_200.avif 200w,
@@ -157,7 +150,6 @@
         " src="boek_ork7wr_c_scale,w_349.avif" alt="Boek" />
       </picture>
 
-      <!-- Quote onderaan -->
       <div class="quote quote-bottom">
         <p>Wat leuk, ik steek snel de kaars aan zodat we kunnen beginnen lezen.</p>
       </div>
@@ -175,64 +167,49 @@
   </div>
 </section>
 
+  <section class="chapter1 chapter1__container">
 
-
-<section class="chapter1 chapter1__container">
-  <div class="container">
-    <header class="title-container">
+    <div class="title-container">
       <h2 class="chapter1__title">Het succes</h2>
-    </header>
-
-    <div class="chapter1__content">
-      <div class="chapter1__text-grid">
-        <p class="chapter1__body">
-          De geur van inkt en vers papier vulde de lucht in de kleine werkplaats in Antwerpen. Het was 1555, en Plantijn
-          had al zijn spaargeld geïnvesteerd in de oprichting van zijn drukkerij, de Officina Plantiniana. Hij wist dat
-          het een riskante onderneming was, maar zijn hart klopte vol hoop en ambitie.
-        </p>
+    </div>
+    <div class="chapter1__text-grid chapter1__text-grid-1">
+      <p class="chapter1__body chapter1__body-1">
+        De geur van inkt en vers papier vulde de lucht in de kleine werkplaats in Antwerpen. Het was 1555, en Plantijn
+        had al zijn spaargeld geïnvesteerd in de oprichting van zijn drukkerij, de Officina Plantiniana. Hij wist dat
+        het een riskante onderneming was, maar zijn hart klopte vol hoop en ambitie.
+      </p>
+    </div>
+    <div class="chapter1__image-grid">
+      <img src="assets/img/neus.png" alt="Illustratie van een neus" class="chapter1__img neus__img">
+      <img src="assets/img/inkttampon.png" alt="Illustratie van een inkt tampon" class="chapter1__img inkttampon__img">
+      <img src="assets/img/papier.png" alt="Illustratie van bladeren papier" class="chapter1__img papier__img">
+    </div>
+  
+    <div class="chapter1__text-grid chapter1__text-grid-2">
+      <p class="chapter1__body chapter1__body-2">
+        Zijn eerste opdracht was een bescheiden boek, een verzameling Latijnse teksten. Hij werkte dag en nacht,
+        perfectioneerde elke pagina en controleerde elk detail. Toen het werk af was, bracht hij het naar een
+        welgestelde koopman op de Grote Markt.
+      </p>
+    </div>
+  
+  <div class="chapter1__interaction-container">
+    <div class="paper-interaction-container">
+      <div class="perkament">
+        <img src="assets/img/perkament.png" alt="Illustratie van een stuk perkament" class="perkament__img">
       </div>
-
-      <div class="chapter1__image-grid">
-        <img src="assets/img/neus.png" alt="Illustratie van een neus" class="chapter1__img neus__img">
-          <div>
-            
-          </div>
-        <img src="assets/img/inkttampon.png" alt="Illustratie van een inkt tampon"
-          class="chapter1__img inkttampon__img">
-        <img src="assets/img/papier.png" alt="Illustratie van bladeren papier" class="chapter1__img papier__img">
+      <div class="pijl-container">
+        <img src="assets/img/pijl.png" alt="Illustratie van een pijl" class="interaction-content__arrow">
       </div>
-
-      <div class="chapter1__text-grid">
-        <p class="chapter1__body chapter1__body-2">
-          Zijn eerste opdracht was een bescheiden boek, een verzameling Latijnse teksten. Hij werkte dag en nacht,
-          perfectioneerde elke pagina en controleerde elk detail. Toen het werk af was, bracht hij het naar een
-          welgestelde koopman op de Grote Markt.
+      <div class="interaction-content">
+        <h3 class="interaction-content__subtitle">Ontdek het eerste boek van Plantijn</h3>
+        <p class="interaction-content__body">
+          Veeg met de inkttampon over het blad om de tekst zichtbaar te maken.
         </p>
       </div>
     </div>
-
-    
-      <div class="paper-interaction-container">
-        <div class="perkament">
-          <img src="assets/img/perkament.png" alt="Illustratie van een stuk perkament" class="perkament__img">
-        </div>
-          <div class="pijl-container">
-            <img src="assets/img/pijl.png" alt="Illustratie van een pijl" class="interaction-content__arrow">
-          </div>
-        <div class="interaction-content">
-          <h3 class="interaction-content__subtitle">Ontdek het eerste boek van Plantijn</h3>
-          <div class="interaction-content__explanation">
-            <p class="interaction-content__body">
-              Veeg met de inkttampon over het blad om de tekst zichtbaar te maken.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
   </section>
-
-
-
 
   <section class="markt">
     <div class="markt-container">
@@ -247,140 +224,158 @@
   </section>
 
 
-  <section class="chapter2">
-    <div class="container">
-      <div class="chapter2__front__images">
-        <img src="assets/img/wolken.png" alt="wolken" class="wolken__img">
-        <img src="assets/img/bliksem.png" alt="bliksem" class="bliksem__img">
-      </div>
-      <div class="chapter2__section">
-        <img src="assets/img/antwerpen.png" alt="antwerpen" class="antwerpen__img">
-      </div>
-      <div class="chapter1__full-title">
-        <img src="assets/img/titel-decoratie-links.png" alt="Neus" class="decoration-left">
-        <h2 class="chapter1__title">Het eind van een mooi hoofdstuk</h2>
-        <img src="assets/img/titel-decoratie-rechts.png" alt="Neus" class="decoration-left">
-      </div>
-        <p class="chapter2__body">De jaren 1560 brachten donkere wolken boven Antwerpen. De stad, ooit een centrum van handel en kennis, raakte verscheurd
+<section class="chapter2">
+  <div class="chapter2__container">
+    <div class="chapter2__images">
+      <img src="assets/img/wolken.png" alt="wolken" class="wolken__img">
+      <img src="assets/img/bliksem.png" alt="bliksem" class="bliksem__img">
+    </div>
+    <div class="chapter2__section">
+      <img src="assets/img/antwerpen.png" alt="antwerpen" class="antwerpen__img">
+    </div>
+    <div class="chapter2__title-wrapper">
+      <h2 class="chapter2__title">Het eind van een mooi hoofdstuk</h2>
+    </div>
+    <div class="chapter2__body-wrapper">
+      <p class="chapter2__body">
+        De jaren 1560 brachten donkere wolken boven Antwerpen. De stad, ooit een centrum van handel en kennis, raakte
+        verscheurd
         door religieuze conflicten tussen katholieken en protestanten.
-        </p>
-        <p class="chapter2__body">Voor een drukker was dit een gevaarlijke tijd; één verkeerde tekst kon het einde van je carrière—of je leven—betekenen.
-        </p>
-    </div>
-  </section>
-
-  <section class="soldaten">
-    <div class="container">
-      <img src="assets/img/soldaten-groep.png" alt="soldaten-links" class="soldaten-links__img">
-      <p class="soldaten__body">Op een ochtend verscheen een groep soldaten bij de deur van de Officina Plantiniana. Ze beschuldigden Plantijn van het
-      drukken van verboden protestantse geschriften. Hoewel hij zichzelf verdedigde en beweerde alleen neutrale werken te
-      drukken, werd hij met argwaan bekeken.
       </p>
-      <p class="soldaten__body"><span class="body-vet">“Ik volg enkel mijn ambacht,”</span>verdedigde Plantijn zichzelf. Maar in zijn hart voelde hij de dreiging groeien. De stad
-      werd steeds gevaarlijker, en zijn geliefde werkplaats was niet langer veilig
+      <p class="chapter2__body .chapter2__body2">
+        Voor een drukker was dit een gevaarlijke tijd; één verkeerde tekst kon het einde van je carrière—of je
+        leven—betekenen.
       </p>
-      <img src="assets/img/soldaat-rechts.png" alt="soldaat-rechts" class="soldaat-rechts__img visually-hidden">
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="chapter3">
-    <div class="container">
-      <div class="chapter3__inleiding">
-      </div>
-      <div class="voetstappen">
-        <img src="assets/img/voetstappen.png" alt="voeten" class="voetstappen__img">
-      </div>
-      <div class="chapter1__full-title">
-        <img src="assets/img/titel-decoratie-links.png" alt="Neus" class="decoration-left">
-        <h2 class="chapter1__title">De verboden manuscripten</h2>
-        <img src="assets/img/titel-decoratie-rechts.png" alt="Neus" class="decoration-left">
-      </div>
-        <p class="chapter3__body">Op een nacht hoorde Plantijn het geluid van voetstappen buiten zijn werkplaats.</p>
-      <div>
-        <img src="assets/img/sleutelgat.png" alt="sleutelgat" class="sleutelgat__img">
-        <p class="chapter3__body-2">Hij keek door het sleutelgat van de deur en zag mannen in donkere mantels, fluisterend en naar zijn huis wijzend. Zijn
-        hart klopte in zijn keel. Hij wist wat dit betekende: zijn leven was in gevaar.
+
+<section class="soldaten">
+  <div class="soldaten__text">
+  <div class="soldaten__container">
+    <div class="soldaten__body-1">
+      <p>
+        Op een ochtend verscheen een groep soldaten bij de deur van de Officina Plantiniana. Ze beschuldigden Plantijn
+        van
+        het drukken van verboden protestantse geschriften. Hoewel hij zichzelf verdedigde en beweerde alleen neutrale
+        werken te drukken, werd hij met argwaan bekeken.
+      </p>
+    </div>
+    <div class="soldaten__image-group">
+      <img src="assets/img/soldaten-groep.png" alt="soldaten-links">
+    </div>
+    <div class="soldaten__body-2">
+      <p>
+        <span class="body-vet">“Ik volg enkel mijn ambacht,”</span> verdedigde Plantijn zichzelf. Maar in zijn hart
+        voelde
+        hij de dreiging groeien. De stad werd steeds gevaarlijker, en zijn geliefde werkplaats was niet langer veilig.
+      </p>
+    </div>
+    <div class="soldaten__image-right">
+      <img src="assets/img/soldaat-rechts.png" alt="soldaat-rechts">
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+
+<section class="chapter3">
+  <div class="container-chapter3">
+    <div class="voetstappen">
+      <img src="assets/img/voetstappen.png" alt="voeten" class="voetstappen__img">
+    </div>
+    <div class="chapter3__intro">
+      <h2 class="chapter3__title">De verboden manuscripten</h2>
+      <p class="chapter3__body">
+        Op een nacht hoorde Plantijn het geluid van voetstappen buiten zijn werkplaats.
+      </p>
+    </div>
+    <div class="sleutelgat">
+      <img src="assets/img/sleutelgat.png" alt="sleutelgat" class="sleutelgat__img">
+    </div>
+    <div class="chapter3__body-group">
+      <p class="chapter3__body-2">
+        Hij keek door het sleutelgat van de deur en zag mannen in donkere mantels, fluisterend en naar zijn huis
+        wijzend.
+        Zijn hart klopte in zijn keel. Hij wist wat dit betekende: zijn leven was in gevaar.
+      </p>
+      <p class="chapter3__body-2">
+        Hij verzamelde zijn gezellen en gaf instructies om de kostbaarste manuscripten te verstoppen. “Als ze hier
+        binnenkomen,” zei hij, “moet ons werk veilig zijn, zelfs als wij dat niet zijn.”
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter4">
+  <div class="chapter4__container">
+    <div class="chapter4__header">
+      <img src="assets/img/maan.png" alt="maan" class="chapter4__maan-img">
+      <h2 class="chapter4__title">De vlucht naar Parijs</h2>
+    </div>
+
+    <div class="chapter4__content">
+      <p class="chapter4__body">
+        In het holst van de nacht, met slechts een kleine zak vol manuscripten en gereedschap, vertrok Plantijn uit
+        Antwerpen.
+      </p>
+      <img src="assets/img/zak.png" alt="zak" class="chapter4__zak-img">
+      <div class="chapter4__text-group">
+        <p class="chapter4__body-2">
+          Hij keek achterom naar zijn drukkerij, een plek die hij met liefde en hard werk had opgebouwd, en voelde zijn
+          hart breken. De reis naar Parijs was zwaar en vol gevaren. Onderweg vermomde hij zichzelf om niet herkend te
+          worden door de autoriteiten.
         </p>
-        <p class="chapter3__body-2">Hij verzamelde zijn gezellen en gaf instructies om de kostbaarste manuscripten te verstoppen. “Als ze hier binnenkomen,”
-        zei hij, “moet ons werk veilig zijn, zelfs als wij dat niet zijn.”
+        <p class="chapter4__body-3">
+          Zijn gedachten bleven terugkeren naar zijn gezin en zijn werkplaats, die hij achter moest laten. Maar diep van
+          binnen voelde hij de woorden die zijn moeder zei voor haar dood: Maak iets van je leven.
         </p>
       </div>
     </div>
-  </section>
-
-  <!-- <section class="interactive__manuscript">
-    <div class="container">
-      <div class="interactive__manuscript__section">
-        <h3 class="interactive__manuscript__title"></h3>
-        <button class="btn">Button links</button>
-        <button class="btn">Button rechts</button>
-        <button class="btn">Select</button>
-      </div>
+    <div class="chapter4__torn-paper">
+      <img src="assets/img/torn-paper.png" alt="Gescheurd Papier" class="torn-paper__img">
     </div>
-  </section> -->
+  </div>
+</section>
 
-  <section class="chapter4">
-    <div class="container">
-      <div class="chapter4__inleiding">
-        <img src="assets/img/maan.png" alt="maan" class="maan__img">
-      </div>
-      <div class="chapter1__full-title">
-        <img src="assets/img/titel-decoratie-links.png" alt="Neus" class="decoration-left">
-        <h2 class="chapter1__title">De vlucht naar Parijs</h2>
-        <img src="assets/img/titel-decoratie-rechts.png" alt="Neus" class="decoration-left">
-      </div>
-      <div class="chapter4__section">
-        <p class="chapter4__body-2">In het holst van de nacht, met slechts een kleine zak vol manuscripten en gereedschap, vertrok Plantijn uit Antwerpen.</p>
-        <img src="assets/img/zak.png" alt="zak" class="zak_img">
-        <p class="chapter4__body">Hij keek achterom naar zijn drukkerij, een plek die hij met liefde en hard werk had opgebouwd, en voelde zijn hart breken. De reis naar Parijs was zwaar en vol gevaren. Onderweg vermomde hij zichzelf om niet herkend te worden door de
-        autoriteiten.</p>
-        <p class="chapter4__body">Zijn gedachten bleven terugkeren naar zijn gezin en zijn werkplaats, die hij achter moest laten. Maar diep
-        van binnen voelde hij de woorden die zijn moeder zei voor haar dood: Maak iets van je leven.
-        </p>
-    </div>
-  </section>
 
-  <section class="torn-paper2">
-    <div class="container">
-      <img src="assets/img/torn-paper.png" alt="Gescheurd Papier" class="torn-paper__img2">
-    </div>
-  </section>
 
-  <section class="afsluit">
-    <div class="container">
-      <div class="portraits">
-        <!-- Portret Moretus -->
-        <picture class="portrait-left">
-          <img sizes="(max-width: 420px) 100vw, 420px" srcset="
-                    assets/img/moretus/moretus_znmxac_c_scale_w_200.avif 200w,
-                    assets/img/moretus/moretus_znmxac_c_scale_w_313.avif 313w,
-                    assets/img/moretus/moretus_znmxac_c_scale_w_397.avif 397w,
-                    assets/img/moretus/moretus_znmxac_c_scale_w_420.avif 420w
-                  " src="moretus_znmxac_c_scale_w_420.avif" alt="Moretus" />
-        </picture>
-      
-        <!-- Portret Balthasar -->
-        <picture class="portrait-right">
-          <img sizes="(max-width: 349px) 100vw, 349px" srcset="
-                                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_200.avif 200w,
-                                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_289.avif 289w,
-                                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_337.avif 337w,
-                                  assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_349.avif 349w"
-            src="balthasar-2-groen_1_pc1d6j_c_scale,w_349.avif" alt="">
-        </picture>
-      </div>
-      <div class="gallery__item">
-        <p class="gallery__caption">En wat er hierna gebeurde, is voor een volgende keer, Nu is het bedtijd.</p>
-      </div>
-      <div class="kandelaar">
-        <picture class="kandelaar">
-          <img sizes="(max-width: 339px) 100vw, 339px" srcset="
-          assets/img/kandelaar/kandelaar-blauw_xubwtm_c_scale_w_200.avif 200w,
-          assets/img/kandelaar/kandelaar-blauw_xubwtm_c_scale_w_339.avif 339w" src="kandelaar-blauw_xubwtm_c_scale,w_339.avif" alt="">
-        </picture>
-      </div>
+<section class="afsluit">
+  <div class="container-afsluit">
+    <p class="gallery__caption-geel">En wat er hierna gebeurde, is voor een volgende keer, nu is het bedtijd.</p>
+    <p class="gallery__caption-groen">Wat leuk, ik steek snel de kaars aan zodat we kunnen beginnen lezen.</p>
+    <div class="portraits portraits-2">
+      <picture class="portrait-left">
+        <img sizes="(max-width: 420px) 100vw, 420px" srcset="
+            assets/img/moretus/moretus_znmxac_c_scale_w_200.avif 200w,
+            assets/img/moretus/moretus_znmxac_c_scale_w_313.avif 313w,
+            assets/img/moretus/moretus_znmxac_c_scale_w_397.avif 397w,
+            assets/img/moretus/moretus_znmxac_c_scale_w_420.avif 420w
+          " src="moretus_znmxac_c_scale_w_420.avif" alt="Portret van Moretus" />
+      </picture>
+      <picture class="portrait-right">
+        <img sizes="(max-width: 349px) 100vw, 349px" srcset="
+            assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_200.avif 200w,
+            assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_289.avif 289w,
+            assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_337.avif 337w,
+            assets/img/balthasar/balthasar-2-groen_1_pc1d6j_c_scale_w_349.avif 349w
+          " src="balthasar-2-groen_1_pc1d6j_c_scale,w_349.avif" alt="Portret van Balthasar" />
+      </picture>
     </div>
-  </section>
+    <div class="kandelaar-2">
+      <picture>
+        <img sizes="(max-width: 339px) 100vw, 339px" srcset="
+            assets/img/kandelaar/kandelaar-blauw_xubwtm_c_scale_w_200.avif 200w,
+            assets/img/kandelaar/kandelaar-blauw_xubwtm_c_scale_w_339.avif 339w
+          " src="kandelaar-blauw_xubwtm_c_scale,w_339.avif" alt="Afbeelding van een kandelaar" />
+      </picture>
+    </div>
+  </div>
+</section>
+
   
   <footer class="footer">
     <div class="container footer__container">

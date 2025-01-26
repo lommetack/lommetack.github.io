@@ -22,6 +22,7 @@
 
 html{
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,*::before,*::after {
@@ -73,6 +74,7 @@ img,picture {
   --c-green: #436246;
   --c-yellow: #FFC659;
   --c-yellow-background: #F4E4CA;
+  --c-yellow-section: #F7D08F;
   --c-background:#F1ECE6;
   --c-grey:#E2DED9;
 
@@ -118,6 +120,10 @@ p {
   font-family: "MartinaPlantijn-Light";
 }
 
+.body-vet{
+  font-size: var(--fs-l);
+}
+
 .chapter1,
 .markt, 
 .chapter2, 
@@ -156,6 +162,8 @@ text-align: center;
   border: none;
   cursor: pointer;
 }
+
+
 
 .intro {
   text-align: center;
@@ -211,35 +219,6 @@ text-align: center;
   margin-inline: var(--space-algemeen);
 }
 
-
-
-
-
-
-
-
-
-
-.wolken__img{
-  max-width: 100%;
-  height: auto;
-  z-index: 2;
-}
-
-.bliksem__img {
-  max-width: 100%;
-  height: auto; 
-  z-index: 1;
-  margin-block: -15vw;
-}
-
-.antwerpen__img {
-  max-width: 100%;
-  height: auto;
-  align-content: center;
-}
-
-
 .highlight {
   color: #d18b00;
   font-weight: bold;
@@ -251,23 +230,11 @@ text-align: center;
   margin-bottom: -4vw;
 }
 
-
-
-
-
-
-
-
-
 .gallery__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* Drie kolommen */
   grid-template-rows: auto auto auto;
-  /* Drie rijen */
-  /* Ruimte tussen de items */
 }
-
 
 .quote-top {
   grid-column: 1 / span 3;
@@ -287,13 +254,11 @@ text-align: center;
 .portrait-left img,
 .portrait-right img {
   max-width: 100%;
-  /* Zorgt dat de afbeeldingen responsief blijven */
   height: auto;
 }
 
 .kandelaar {
   grid-column: 1 / span 2;
-  /* Onder de quotes, midden */
   grid-row: 5;
   max-width: 70%;
   transform: rotate(-5deg);
@@ -310,7 +275,6 @@ text-align: center;
 
 .quote-bottom {
   grid-column: 1 / span 3;
-  /* Onderaan, neemt alle kolommen */
   grid-row: 3;
   margin-block: 10vw 0vw;
 }
@@ -338,33 +302,6 @@ text-align: center;
   grid-column: 1 / span 3;
 }
 
-
-
-
-
-
-/* .lucifer {
-  grid-area: lucifer;
-  align-self: center;
-  justify-self: center;
-}
-
-.kandelaar {
-  grid-area: kandelaar;
-  align-self: start;
-  justify-self: center;
-}
-
-.lucifer__img {
-  max-height: 500px;
-  max-width: auto;
-}
-
-.kandelaar__img {
-  max-height: 500px;
-  max-width: auto;
-} */
-
 .pijl__img {
   grid-area: pijl;
   max-width: auto;
@@ -372,160 +309,57 @@ text-align: center;
   transform: rotate(45deg);
 }
 
-/* .interaction p {
-  grid-area: tekst;
-  align-self: start;
-  text-align: left;
-} */
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 768px) {
-  .header__nav {
-    display: none;
-  }
-
-  .boek__img {
-    display: none;
-  }
-
-  .header__menu-toggle {
-    display: block;
-  }
-  
-  .quote-top {
-  font-style: italic;
-  background-color: rgb(255,198,89, 0.4);
-  text-align: left;
-  padding-block: 4vw;
-  padding-inline: 10vw;
-  }
-
-  .quote-bottom {
-  font-style: italic;
-  background-color: rgb(67,98,70, 0.4);
-  text-align: left;
-  padding-block: 4vw;
-  padding-inline: 10vw;
-  }
-}
-
-/* .chapter1__images {
+.container-chapter3{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  gap: 10px;
 }
 
-.chapter1__img {
+.container-chapter3 {
+  grid-template-areas:
+    "voetstappen"
+    "intro"
+    "sleutelgat"
+    "body-group";
+  grid-template-columns: 1fr;
+}
+
+.voetstappen {
+  grid-area: voetstappen;
+}
+
+.voetstappen__img {
   width: 100%;
-  object-fit: cover;
-  z-index: 1;
-  margin-block: -10vw;
-}
-
-.chapter1__img:nth-child(3) {
-  grid-column: 1 / span 2;
-}
-
-.neus__img {
-  max-width: 150px;
   height: auto;
 }
 
-.inkttampon__img {
-  max-width: 300px;
-  height: auto;
-}
-
-.papier__img {
-  max-width: 150px;
-  height: auto;
-}
-
-.chapter1__full-title {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  margin-block: var(--space-2xl) var(--space-m);
+.chapter3__intro {
+  grid-area: intro;
+  text-align: center;
 }
 
 .chapter1__title {
-  font-family: "GiordanoGold";
-  text-align: center;
-  color: var(--c-blue);
+  margin-inline: var(--space-xl);
 }
 
-.decoration-left,
-.decoration-right {
-  width: 40px;
-  height: auto;
-}
-
-.chapter1__body {
+.chapter3__body {
   margin-inline: var(--space-algemeen);
-  margin-block: var(--space-m-l);
-}
-
-.perkament__img {
-  align-items: center;
-  max-width: 300px;
-  height: auto;
-} */
-
-/* .interaction-content{
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  padding: 2rem;
-}
-
-.paper-interaction-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: center;
-  padding: 2rem;
-}
-
-.perkament__img {
-  align-items: center;
-  max-width: 80%;
-  height: auto;
-  justify-content: center;
-}
-
-
-.interaction-content__subtitle {
-  font-family: "GiordanoGold";
-  color: var(--c-blue);
-  margin-bottom: 1rem;
   text-align: left;
 }
 
-.interaction-content__explanation {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.sleutelgat {
+  grid-area: sleutelgat;
+  text-align: center;
 }
 
-.interaction-content__body {
-  margin-block: 0rem 4rem;
-}
-
-.interaction-content__arrow {
-  max-width: 50px;
+.sleutelgat__img {
+  width: 80%;
   height: auto;
-  animation: bounce 2s infinite;
-} */
+}
 
+.chapter3__body-group {
+  grid-area: body-group;
+  text-align: left;
+  margin-inline: var(--space-algemeen);
+}
 
 .chapter1-container {
   display: grid;
@@ -590,7 +424,6 @@ text-align: center;
   margin-inline: -5vw 0vw;
 }
 
-
 .chapter1__img {
   max-width: 100%;
   height: auto;
@@ -643,6 +476,11 @@ text-align: center;
   grid-column: 1 / span 2;
 }
 
+.chapter1__text-grid-2 {
+  grid-row: 2;
+  grid-column: 1;
+}
+
 .pijl-container {
   grid-column: 2 ;
   grid-row: 2;
@@ -651,17 +489,12 @@ text-align: center;
   margin-block: -30vw 0vw;
 }
 
-
-
-
 .markt__section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  /* Ruimte tussen de kolommen */
   align-items: center;
-  /* Centraal uitlijnen in de rij */
 }
 
 .markt__body {
@@ -680,13 +513,128 @@ text-align: center;
   align-items: left;
 } 
 
-.chapter2{
-  margin-block: 0px var(--space-xl);
+.chapter2__container {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+.chapter2__images {
+  position: relative;
+  grid-row: 1;
+  text-align: center;
+}
+
+.wolken__img {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  height: auto;
+}
+
+.bliksem__img {
+  grid-row: 1;
+  z-index: 1;
+  max-width: 80%;
+  height: auto;
+  margin-block: -14vw;
+}
+
+.chapter2__section {
+  grid-row: 2;
+  text-align: center;
+}
+
+.antwerpen__img {
+  height: auto;
+}
+
+.chapter2__title-wrapper {
+  grid-row: 3;
+  text-align: center;
+}
+
+.chapter2__title {
+  margin-block: 10vw;
+  margin-inline: var(--space-l);
+}
+
+.chapter2__body-wrapper {
+  grid-row: 4;
 }
 
 .chapter2__body {
+  margin-block: 4vw;
   margin-inline: var(--space-algemeen);
-  margin-block: var(--space-m-l);
+}
+
+.chapter4__container {
+  display: grid;
+  gap: 1rem;
+  background-color: var(--c-yellow-section);
+}
+
+.chapter4__torn-paper {
+  grid-column: 1 / -1;
+}
+
+.chapter4__torn-paper img {
+  width: 100%;
+  height: auto;
+  margin-block: 0vw -12vw;
+}
+
+.chapter4__container {
+  grid-template-areas:
+    "header"
+    "body"
+    "zak"
+    "text-group"
+    "torn-paper";
+  grid-template-columns: 1fr;
+}
+
+.chapter4__header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+.chapter4__maan-img {
+  width: 40%;
+  height: auto;
+  margin-left: var(--space-algemeen);
+}
+
+.chapter4__title {
+  font-family: "GiordanoGold";
+  color: var(--c-blue);
+}
+
+.chapter4__body {
+  grid-area: body;
+  margin-inline: var(--space-m-l);
+}
+
+.chapter4__zak-img {
+  grid-area: zak;
+  display: block;
+  margin: 0 auto;
+  max-width: 70%;
+  height: auto;
+}
+
+.chapter4__text-group {
+  grid-area: text-group;
+}
+
+.chapter4__body-2,
+.chapter4__body-3 {
+  margin-left: var(--space-algemeen);
+}
+
+.chapter4__body-2 {
+  margin-block: var(--space-m);
 }
 
 .soldaten-links__img{
@@ -706,16 +654,6 @@ text-align: center;
 .chapter3__body-2 {
   margin-inline: var(--space-algemeen);
   margin-block: var(--space-m-l) var(--space-l-xl);
-}
-
-.chapter4__body{
-  margin-inline: 42px;
-  margin-block: var(--space-m-l);
-}
-
-.chapter4__body-2 {
-  margin-inline: var(--space-algemeen);
-  margin-block: var(--space-m-l);
 }
 
 .footer {
@@ -777,124 +715,131 @@ text-align: center;
   height: 40px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* .title-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+.soldaten__container {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr;
+  width: 100%;
 }
 
-.title-container::before,
-.title-container::after {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-  background-position: center;
+.soldaten__body-1,
+.soldaten__body-2 {
+  margin-inline: var(--space-algemeen);
 }
 
-.title-container::before {
-  background-image: url('assets/img/titel-decoratie-links.png');
-  margin-right: 10px;
+.soldaten__body-1 {
+  margin-block: 20vw;
 }
 
-.title-container::after {
-  background-image: url('assets/img/titel-decoratie-rechts.png');
-  margin-left: 10px;
-} */
+.soldaten__image-group img {
+  width: 100%;
+  height: auto;
 
+}
 
+.kandelaar__img.active {
+  filter: brightness(1.2);
+  transition: filter 0.3s ease-in-out;
+}
 
+.container-afsluit {
+  display: grid;
+}
 
+.gallery__caption-geel {
+  text-align: left;
+  margin-inline: var(--space-l);
+  grid-row: 3;
+  grid-column: 1 /span 3;
+}
+
+.gallery__caption-groen {
+  text-align: left;
+  margin-inline: var(--space-l);
+  grid-row: 1;
+  grid-column: 1 /span 3;
+}
+
+.portraits-2 {
+  display: grid;
+  gap: 1rem;
+}
+
+.kandelaar-2 {
+  grid-column: 2 / span 2;
+  grid-row: 4;
+  max-width: 70%;
+  transform: rotate(-5deg);
+  margin-block: -5vw -15vw;
+  z-index: 3;
+}
 
 @media (min-width: 1280px) {
 
-  body{
-    margin-block: var(--space-algemeen) 0px;
-  }
+body{
+  margin-block: var(--space-algemeen) 0px;
+}
 
 .intro {
   background-image: url('assets/img/kraag-desktop.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* transition: background-position 10s ease-out; Optioneel: voor een vloeiende beweging */
 }
 
-  .header__container {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    justify-items: center;
-  }
+.header__container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-items: center;
+}
 
-  .header__logo-img {
-    max-width: 100px;
-    max-height: auto;
-  }
+.header__logo-img {
+  max-width: 100px;
+  max-height: auto;
+}
 
-  .header__img {
-    margin-top: -2rem;
-    max-height: auto;
-    max-height: 550px;
-  }
+.header__img {
+  margin-top: -2rem;
+  max-height: auto;
+  max-height: 550px;
+}
 
-  .intro__title {
-    font-size: var(--fs-4);
-    margin-block: -2vw;
-  }
+.intro__title {
+  font-size: var(--fs-4);
+  margin-block: -2vw;
+}
 
-  .intro__container {
-    margin-block: 0vw 10vw;
-  }
+.intro__container {
+  margin-block: 0vw 10vw;
+}
 
-  .intro__title-2 {
-    font-size: var(--fs-5);
-    margin-top: -4rem;
-  }
+.intro__title-2 {
+  font-size: var(--fs-5);
+  margin-top: -4rem;
+}
 
-  .story__img{
-    transform: scaleY(-1);
-  }
+.story__img{
+  transform: scaleY(-1);
+}
 
-  .nav {
-    display: flex;
-    list-style: none;
-    gap: 200px;
-  }
+.nav {
+  display: flex;
+  list-style: none;
+  gap: 200px;
+}
 
-  .nav__item .nav__link {
-    text-decoration: none;
-    color: var(--c-blue);
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
+.nav__item .nav__link {
+  text-decoration: none;
+  color: var(--c-blue);
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
-  .nav__item .nav__link:hover {
-    color: var(--c-yellow);
-  }
-
-
-
-
-
-
-
-
-
+.nav__item .nav__link:hover {
+  color: var(--c-yellow);
+}
 
 .sub-intro .container {
   display: grid;
@@ -910,7 +855,6 @@ text-align: center;
 .story__item {
   display: flex;
   justify-content: center;
-  /* Zorgt ervoor dat de afbeelding gecentreerd is */
 }
 
 .story__img img {
@@ -954,7 +898,6 @@ text-align: center;
   margin-block: 10vw;
 }
 
-
 .markt {
   padding: 20px;
 }
@@ -962,11 +905,8 @@ text-align: center;
 .markt__section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Twee gelijke kolommen */
   gap: 20px;
-  /* Ruimte tussen de kolommen */
   align-items: center;
-  /* Verticale uitlijning */
 }
 
 .markt__body {
@@ -993,15 +933,6 @@ text-align: center;
 .pointer_text{
   grid-column: 1;
 }
-
-
-
-
-
-
-
-
-
 
 .gallery__container {
   display: grid;
@@ -1033,15 +964,20 @@ text-align: center;
   grid-row: 2;
 }
 
+.portraits-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 4 / span 5;
+  grid-row: 2;
+}
+
 .portrait-right  {
   max-width: 85%;
-  /* Zorgt dat de afbeeldingen responsief blijven */
   height: auto;
 }
 
 .kandelaar {
   grid-column: 2 / span 3;
-  /* Onder de quotes, midden */
   grid-row: 2;
   max-width: 70%;
   transform: rotate(-7deg);
@@ -1094,115 +1030,10 @@ text-align: center;
   margin-block: -2.5vw -5vw;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.chapter1__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.chapter1__image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  justify-items: center;
-  align-items: center;
-  margin-bottom: 2rem;
-  grid-row: 1;
-  grid-column: 1 / span 3;
-}
-
-.chapter1__text-grid {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 1rem;
-  align-items: start;
-}
-
-.chapter1__text-grid p {
-  grid-column: 2;
-  /* Plaatst de tekst naast de afbeeldingen */
-}
-
-.neus__img,
-.inkttampon__img,
-.papier__img {
-  max-width: 100px;
-}
-
-.paper-interaction-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  gap: 1rem;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.perkament__img {
-  grid-column: 1;
-  justify-self: start;
-}
-
-.interaction-content {
-  grid-column: 3;
-  justify-self: end;
-}
-
-.interaction-content__arrow {
-  grid-column: 2;
-  justify-self: center;
-}
-
-
-
-
-
-/* 
 .chapter1__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-.title-container {
-  grid-column: 2;
-  text-align: center;
-  font-family: "GiordanoGold";
-}
-
-.chapter1__title {
-  text-align: center;
-  font-family: "GiordanoGold";
-}
-
-.chapter1__body {
-  text-align: left;
-  margin-block: var(--space-algemeen);
-  margin-inline: var(--space-algemeen);
-}
-
-.chapter1__content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-.chapter1__text-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  text-align: center;
+  grid-template-rows: 1fr 1fr;
   gap: 1rem;
 }
 
@@ -1212,90 +1043,412 @@ text-align: center;
   grid-template-rows: repeat(1, 1fr);
   gap: 1rem;
   justify-items: center;
+  grid-row: 1;
+  grid-column: 1;
 }
 
 .neus__img {
   grid-column: 1 / span 2;
   grid-row: 1;
+  margin-inline: -4vw 0vw;
 }
 
 .inkttampon__img {
   grid-column: 2 / span 3;
   grid-row: 1;
   margin-inline: 5vw 0vw;
-  margin-block: -10vw 0vw;
+  margin-block: -3vw 0vw;
 }
 
 .papier__img {
   grid-column: 3 / span 3;
   grid-row: 2;
-  margin-block: -20vw 0vw;
+  margin-block: -10vw 0vw;
   margin-inline: -5vw 0vw;
+} 
+
+.title-container {
+  grid-column: 2;
+  grid-row: 1;
+  margin-block: -4vw;
 }
 
+.chapter1__text-grid-1 {
+  grid-column: 2;
+  grid-row: 1;
+  margin-block: 10vw;
+} 
 
-.chapter1__img {
+.chapter1__body{
+  margin-inline: 11vw;
+}
+ 
+.chapter1__text-grid-2 {
+  grid-column: 1;
+  grid-row: 2;
+  margin-block: 5vw;
+} 
+
+
+.paper-interaction-container {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-block: -3vw;
+  margin-inline: -1vw;
+}
+
+.perkament__img {
+  width: 100%;
+}
+
+.perkament{
+  margin-block: 1vw;
+  margin-inline: 1vw;
+}
+
+.perkament__body-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.markt {
+  padding: 20px;
+}
+
+.markt__section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.markt__body {
+  grid-column: 2;
+  margin-inline: 15vw 10vw;
+  margin-block: 10vw -10vw;
+}
+
+.markt__img{
+  margin-inline: -2vw;
+}
+
+.perkament__body-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.chapter2__container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "images images"
+    "title antwerpen"
+    "body antwerpen";
+  gap: 2rem;
+  position: relative;
+}
+
+.chapter2__images {
+  position: relative;
+  grid-area: images;
+  text-align: center;
+}
+
+.wolken__img {
+  z-index: 2;
+  position: relative;
   max-width: 100%;
   height: auto;
 }
 
-.paper-interaction-container {
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem;
-  align-items: center;
+.bliksem__img {
+  grid-row: 1;
+  z-index: 1;
+  max-width: 80%;
+  height: auto;
+  margin-block: -6vw -5vw;
+  margin-inline: 0vw -60vw;
 }
 
-.perkament {
-  grid-column: 1 / span 2;
-  grid-row: 1;
+.chapter2__section {
+  grid-area: antwerpen;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-block: -20vw;
 }
 
-.perkament__img {
-  max-width: 80%;
+.antwerpen__img {
+  width: 100%;
+  max-width: 1000px;
   height: auto;
 }
 
-.interaction-content {
-  grid-column: 1 / span 2;
+.chapter2__title-wrapper {
+  grid-area: title;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-block: -20vw;
+}
+
+.chapter2__title {
+  margin-inline: var(--space-3xl);
+}
+
+.chapter2__body-wrapper {
+  grid-area: body;
+  display: flex;
+  flex-direction: column;
+  margin-inline: var(--space-3xl);
+}
+
+.soldaten__container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.soldaten__image-group {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 80%;
+  margin-block: 10vw;
+}
+
+.soldaten__body-1,
+.soldaten__body-2 {
+  margin-inline: -20vw 20vw ;
+}
+
+.soldaten__body-1 {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+  margin-block: 9vw;
+}
+
+.soldaten__body-2 {
+  grid-column: 2 /span 3;
+  grid-row: 1;
+  margin-block: 25vw 0vw;
+}
+
+.soldaten__image-right {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.container-chapter3 {
+  display: grid;
+  grid-template-areas:
+    "voetstappen voetstappen"
+    "intro sleutelgat"
+    "body-group sleutelgat";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1rem;
+}
+
+.voetstappen {
+  grid-area: voetstappen;
+}
+
+.voetstappen__img {
+  width: 100%;
+  height: auto;
+  margin-block: -15vw 0vw;
+}
+
+.chapter3__intro {
+  grid-area: voetstappen;
+  align-self: left;
+
+}
+
+.chapter3__title {
+  margin-inline: 8vw 65vw;
+}
+
+.chapter3__body {
+  margin-inline: 10vw 60vw;
+}
+
+.sleutelgat {
+  grid-area: sleutelgat;
+  align-self: center;
+}
+
+.sleutelgat__img {
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-block: -15vw 10vw;
+}
+
+.chapter3__body-group {
+  grid-area: body-group;
+  align-self: center;
+  margin-inline: 23vw 10vw;
+  margin-block: -15vw 20vw;
+}
+
+.chapter3__body-2 {
+  margin-bottom: 1rem;
+}
+
+.chapter4__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+.chapter4__header {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.chapter4__title {
+  grid-column: 1;
+  justify-self: start;
+  align-self: center;
+  margin-inline: 10vw;
+  margin-block: -15vw 1vw;
+}
+
+.chapter4__maan-img {
+  grid-column: 2;
+  justify-self: end;
+  width: 80%; 
+  margin-block: -8vw 10vw;
+  margin-inline: -5vw 10vw;
+}
+
+.chapter4__content {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+}
+
+.chapter4__body {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  margin-inline: 10vw;
+  margin-block: -5vw 1vw;
+}
+
+.chapter4__zak-img {
+  grid-column: 1;
   grid-row: 2;
+  justify-self: center;
 }
 
-.interaction-content__subtitle {
-  font-family: "GiordanoGold";
-  color: var(--c-blue);
-  margin-inline: var(--space-algemeen);
-  text-align: left;
-}
-
-.interaction-content__body {
-  margin-inline: var(--space-algemeen);
-  margin-block: var(--space-algemeen);
-  text-align: left;
-}
-
-.interaction-content__subtitle {
-  margin-inline: var(--space-algemeen) 15vw;
-}
-
-.interaction-content__arrow {
-  transform: rotate(90deg);
-  grid-column: 1 / span 2;
-}
-
-.pijl-container {
+.chapter4__text-group {
   grid-column: 2;
   grid-row: 2;
-  max-width: 80%;
-  z-index: 1;
-  margin-block: -30vw 0vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  margin-inline: 0vw 18vw;
 }
- */
+
+.chapter4__torn-paper {
+  grid-column: 1 / 3;
+  margin-top: 2rem;
+}
+
+.chapter4__torn-paper img {
+  width: 100%;
+  height: auto;
+  margin-block: -5vw;
+}
 
 
 
 
+.container-afsluit {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto;
+  align-items: start;
+  margin-block: 5vw 0vw;
+}
+
+.gallery__caption-geel {
+  grid-column: 1;
+  grid-row: 1;
+  margin-inline: 5vw 34vw;
+}
+
+.portraits-2 {
+  grid-column: 1;
+  grid-row: 2;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery__caption-groen {
+  grid-column: 2;
+  grid-row: 1;
+  margin-inline: -10vw 20vw;
+}
+
+.kandelaar-2 {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  justify-self: center;
+  margin-block: 0vw -10vw;
+  z-index: 3;
+}
+}
+
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+
+  .soldaten__image-right {
+    display: none;
+  }
+
+
+  .boek__img {
+    display: none;
+  }
+
+  .header__menu-toggle {
+    display: block;
+  }
+
+  .quote-top {
+    font-style: italic;
+    background-color: rgb(255, 198, 89, 0.4);
+    text-align: left;
+    padding-block: 4vw;
+    padding-inline: 10vw;
+  }
+
+  .quote-bottom {
+    font-style: italic;
+    background-color: rgb(67, 98, 70, 0.4);
+    text-align: left;
+    padding-block: 4vw;
+    padding-inline: 10vw;
+  }
 }
