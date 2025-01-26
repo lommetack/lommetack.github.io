@@ -900,54 +900,42 @@ text-align: center;
   cursor: pointer;
   width: 40%;
 }
-/* Nieuwe container voor de select en retry knoppen */
+
 .buttons-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* Zorg ervoor dat de knoppen onder elkaar staan */
   gap: 10px;
-  /* Ruimte tussen de knoppen */
   margin-top: 2vw;
-  /* Ruimte boven de knoppen */
   position: relative;
-  /* Zorg ervoor dat alles goed gepositioneerd is */
   width: 100%;
 }
 
-/* Stijl voor de select knop en retry knop */
 .select-btn,
 .retry-btn {
   cursor: pointer;
   width: 40%;
   max-width: 200px;
-  /* Voeg een max-breedte toe voor de knoppen */
   display: block;
-  /* Zorg ervoor dat de knoppen als blokken worden weergegeven */
   margin: 0 auto;
-  /* Zorg ervoor dat de knoppen in het midden staan */
 }
 
-/* Resultaat container: standaard verborgen */
 .result {
   display: none;
   flex-direction: column;
   gap: 10px;
-  /* Ruimte tussen de tekst en de retry button */
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-/* Toon resultaat en retry-knop wanneer nodig */
 .result.show {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Zorg ervoor dat de knoppen altijd gecentreerd zijn in .buttons-container */
 .buttons-container .retry-btn {
   margin-top: 10px;
 }
@@ -1761,19 +1749,16 @@ body{
   }
 
   .voetstappen__img {
-    max-width: 90vw;  /* Zorg ervoor dat de voetstappen niet breder zijn dan 90% van het scherm */
+    max-width: 90vw;  
   }
 }
 
 
 
-/* Container die de overflow beperkt */
 .container-chapter3 {
   overflow-x: hidden;
-  /* Zorg ervoor dat er geen horizontale scroll is */
   position: relative;
   width: 100%;
-  /* Zorg ervoor dat de container de volledige breedte van het scherm gebruikt */
 }
 
 .voetstappen__img {
@@ -1802,7 +1787,6 @@ body{
 
 .header__menu-toggle {
   display: none;
-  /* Standaard verborgen */
   flex-direction: column;
   background: none;
   border: none;
@@ -1817,7 +1801,6 @@ body{
   margin: 3px 0;
 }
 
-/* Mobiele weergave */
 @media screen and (max-width: 768px) {
   .header__nav {
     display: none;
@@ -1845,7 +1828,6 @@ body{
     display: block;
   }
 
-  /* Verplaatsen van de rest van de inhoud naar beneden als het menu opent */
   .header.open+* {
     transform: translateY(200px);
     transition: transform 0.3s ease-in-out;
@@ -1866,13 +1848,6 @@ body{
 .section:not(.dark) {
   color: var(--c-black);
 }
-
-
-
-
-
-
-
 
 
 @media (min-width: 768px) and (max-width: 1280px) {
