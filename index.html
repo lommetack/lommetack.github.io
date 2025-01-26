@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://use.typekit.net/qzm6ftc.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
   <title>Christoffel Plantijn</title>
 </head>
 
@@ -21,10 +24,10 @@
       </button>
       <nav class="header__nav">
         <ul class="nav">
-          <li class="nav__item"><a href="#" class="nav__link">Succes</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Einde</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Manuscripten</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Parijs</a></li>
+          <li class="nav__item"><a href="#chapter1" class="nav__link">Succes</a></li>
+          <li class="nav__item"><a href="#chapter2" class="nav__link">Einde</a></li>
+          <li class="nav__item"><a href="#chapter3" class="nav__link">Manuscripten</a></li>
+          <li class="nav__item"><a href="#chapter4" class="nav__link">Parijs</a></li>
         </ul>
       </nav>
     </div>
@@ -156,7 +159,7 @@
 
       <div class="gallery-pointer">
         <img src="assets/img/pijl.png" alt="Pijl" class="gallery-pointer__img">
-        <p class="gallery-pointer__text">Pak de lucifer en laat de kaars branden</p>
+        <p class="gallery-pointer__text">Klik op de lucifer en laat zo de kaars branden</p>
       </div>
 
       <div class="torn-paper">
@@ -167,10 +170,10 @@
   </div>
 </section>
 
-  <section class="chapter1 chapter1__container">
+  <section class="chapter1 chapter1__container section" id="chapter1"> 
 
     <div class="title-container">
-      <h2 class="chapter1__title">Het succes</h2>
+      <h2 class=" chapter1__title">Het succes</h2>
     </div>
     <div class="chapter1__text-grid chapter1__text-grid-1">
       <p class="chapter1__body chapter1__body-1">
@@ -180,9 +183,38 @@
       </p>
     </div>
     <div class="chapter1__image-grid">
-      <img src="assets/img/neus.png" alt="Illustratie van een neus" class="chapter1__img neus__img">
-      <img src="assets/img/inkttampon.png" alt="Illustratie van een inkt tampon" class="chapter1__img inkttampon__img">
-      <img src="assets/img/papier.png" alt="Illustratie van bladeren papier" class="chapter1__img papier__img">
+      <picture class="chapter1__img neus__img">
+        <img class="chapter1__img neus__img" sizes="(max-width: 253px) 100vw, 253px" srcset="
+      assets/img/neus/neus_vcznb7_c_scale_w_200.avif 200w,
+      assets/img/neus/neus_vcznb7_c_scale_w_253.avif 253w" src="neus_vcznb7_c_scale_w_253.avif" alt="">
+      </picture>
+
+      <picture class="chapter1__img inkttampon__img">
+        <img class="chapter1__img inkttampon__img" sizes="(max-width: 495px) 100vw, 495px" srcset="
+      assets/img/inkttampon/inkttampon_ubdy95_c_scale_w_200.avif 200w,
+      assets/img/inkttampon/inkttampon_ubdy95_c_scale_w_495.avif 495w" src="inkttampon_ubdy95_c_scale,w_495.avif" alt="">
+      </picture>
+
+
+      <picture class="chapter1__img papier__img">
+        <img class="chapter1__img papier__img" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+      assets/img/papier/papier_gnfxhg_c_scale,w_200.avif 200w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_346.avif 346w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_453.avif 453w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_535.avif 535w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_622.avif 622w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_692.avif 692w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_764.avif 764w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_839.avif 839w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_904.avif 904w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_957.avif 957w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_1218.avif 1218w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_1221.avif 1221w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_1291.avif 1291w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_1343.avif 1343w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_1397.avif 1397w,
+      assets/img/papier/papier_gnfxhg_c_scale,w_1400.avif 1400w" src="papier_gnfxhg_c_scale,w_1400.avif" alt="">
+      </picture>
     </div>
   
     <div class="chapter1__text-grid chapter1__text-grid-2">
@@ -211,27 +243,57 @@
   </div>
   </section>
 
-  <section class="markt">
+  <section class="markt section">
     <div class="markt-container">
       <div class="markt__section">
         <p class="markt__body">
           Meester Plantijn, ik bewonder je werk. Dit is van een zeldzame kwaliteit. Ik voorspel dat jouw
           werk niet onopgemerkt zal blijven.
         </p>
-        <img src="assets/img/markt.png" alt="markt" class="markt__img">
+        <picture class="markt__img">
+          <img class="markt__img" sizes="(max-width: 981px) 100vw, 981px" srcset="
+        assets/img/markt/markt_j1mjfa_c_scale,w_200.avif 200w,
+        assets/img/markt/markt_j1mjfa_c_scale,w_372.avif 372w,
+        assets/img/markt/markt_j1mjfa_c_scale,w_504.avif 504w,
+        assets/img/markt/markt_j1mjfa_c_scale,w_602.avif 602w,
+        assets/img/markt/markt_j1mjfa_c_scale,w_701.avif 701w,
+        assets/img/markt/markt_j1mjfa_c_scale,w_795.avif 795w,
+        assets/img/markt/markt_j1mjfa_c_scale,w_880.avif 880w,
+        assets/img/markt/markt_j1mjfa_c_scale,w_981.avif 981w" src="markt_j1mjfa_c_scale,w_981.avif" alt="">
+        </picture>
       </div>
     </div>
   </section>
 
 
-<section class="chapter2">
+<section class="chapter2 section" id="chapter2">
   <div class="chapter2__container">
     <div class="chapter2__images">
-      <img src="assets/img/wolken.png" alt="wolken" class="wolken__img">
-      <img src="assets/img/bliksem.png" alt="bliksem" class="bliksem__img">
+      <picture class="wolken__img">
+        <img class="wolken__img" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+      assets/img/wolken/wolken_gpguzf_c_scale,w_200.avif 200w,
+      assets/img/wolken/wolken_gpguzf_c_scale,w_581.avif 581w,
+      assets/img/wolken/wolken_gpguzf_c_scale,w_826.avif 826w,
+      assets/img/wolken/wolken_gpguzf_c_scale,w_1040.avif 1040w,
+      assets/img/wolken/wolken_gpguzf_c_scale,w_1250.avif 1250w,
+      assets/img/wolken/wolken_gpguzf_c_scale,w_1400.avif 1400w" src="wolken_gpguzf_c_scale,w_1400.avif" alt="">
+      </picture>
+      <picture class="bliksem__img">
+        <img class="bliksem__img" src="assets/img/bliksem.png" alt="Bliksem">
     </div>
     <div class="chapter2__section">
-      <img src="assets/img/antwerpen.png" alt="antwerpen" class="antwerpen__img">
+      <picture class="antwerpen__img">
+        <img class="antwerpen__img" sizes="(max-width: 1001px) 100vw, 1001px" srcset="
+      assets/img/antwerpen/antwerpen_uofeyk_c_scale,w_200.avif 200w,
+      assets/img/antwerpen/antwerpen_uofeyk_c_scale,w_342.avif 342w,
+      assets/img/antwerpen/antwerpen_uofeyk_c_scale,w_449.avif 449w,
+      assets/img/antwerpen/antwerpen_uofeyk_c_scale,w_539.avif 539w,
+      assets/img/antwerpen/antwerpen_uofeyk_c_scale,w_629.avif 629w,
+      assets/img/antwerpen/antwerpen_uofeyk_c_scale,w_716.avif 716w,
+      assets/img/antwerpen/antwerpen_uofeyk_c_scale,w_828.avif 828w,
+      assets/img/antwerpen/antwerpen_uofeyk_c_scale,w_958.avif 958w,
+      assets/img/antwerpen/antwerpen_uofeyk_c_scale,w_1001.avif 1001w" src="antwerpen_uofeyk_c_scale,w_1001.avif" alt="">
+      </picture>
     </div>
     <div class="chapter2__title-wrapper">
       <h2 class="chapter2__title">Het eind van een mooi hoofdstuk</h2>
@@ -251,7 +313,7 @@
 </section>
 
 
-<section class="soldaten">
+<section class="soldaten section">
   <div class="soldaten__text">
   <div class="soldaten__container">
     <div class="soldaten__body-1">
@@ -263,7 +325,16 @@
       </p>
     </div>
     <div class="soldaten__image-group">
-      <img src="assets/img/soldaten-groep.png" alt="soldaten-links">
+      <picture>
+        <img sizes="(max-width: 1051px) 100vw, 1051px" srcset="
+      assets/img/soldaten-groep/soldaten-groep_erdkot_c_scale,w_200.avif 200w,
+      assets/img/soldaten-groep/soldaten-groep_erdkot_c_scale,w_434.avif 434w,
+      assets/img/soldaten-groep/soldaten-groep_erdkot_c_scale,w_609.avif 609w,
+      assets/img/soldaten-groep/soldaten-groep_erdkot_c_scale,w_729.avif 729w,
+      assets/img/soldaten-groep/soldaten-groep_erdkot_c_scale,w_857.avif 857w,
+      assets/img/soldaten-groep/soldaten-groep_erdkot_c_scale,w_966.avif 966w,
+      assets/img/soldaten-groep/soldaten-groep_erdkot_c_scale,w_1051.avif 1051w" src="soldaten-groep_erdkot_c_scale,w_1051.avif" alt="">
+      </picture>
     </div>
     <div class="soldaten__body-2">
       <p>
@@ -273,7 +344,11 @@
       </p>
     </div>
     <div class="soldaten__image-right">
-      <img src="assets/img/soldaat-rechts.png" alt="soldaat-rechts">
+      <picture>
+        <img sizes="(max-width: 414px) 100vw, 414px" srcset="
+      assets/img/soldaat-rechts/soldaat-rechts_jkabvn_c_scale,w_200.avif 200w,
+      assets/img/soldaat-rechts/soldaat-rechts_jkabvn_c_scale,w_414.avif 414w" src="soldaat-rechts_jkabvn_c_scale,w_414.avif" alt="">
+      </picture>
     </div>
   </div>
   </div>
@@ -282,10 +357,10 @@
 
 
 
-<section class="chapter3">
+<section class="chapter3 section" id="chapter3">
   <div class="container-chapter3">
     <div class="voetstappen">
-      <img src="assets/img/voetstappen.png" alt="voeten" class="voetstappen__img">
+      <img src="assets/img/voetstappen.svg" alt="voeten" class="voetstappen__img">
     </div>
     <div class="chapter3__intro">
       <h2 class="chapter3__title">De verboden manuscripten</h2>
@@ -294,7 +369,7 @@
       </p>
     </div>
     <div class="sleutelgat">
-      <img src="assets/img/sleutelgat.png" alt="sleutelgat" class="sleutelgat__img">
+      <img class="sleutelgat__img" src="assets/img/sleutelgat.png" alt="Sleutelgat">
     </div>
     <div class="chapter3__body-group">
       <p class="chapter3__body-2">
@@ -310,10 +385,54 @@
   </div>
 </section>
 
-<section class="chapter4">
+<section class="manuscript-section section">
+  <div class="manuscript-container">
+    <h3 class="manuscript-title">Waar ga je de verboden manuscripten verstoppen?</h3>
+    <p class="manuscript-body">Swipe om meer plaatsen te zien</p>
+
+    <div class="places-wrapper">
+      <div class="pijlen-interaction">
+        <img src="assets/img/pijl-links.svg" alt="Vorige" id="prev-btn" class="pijl-btn pijl-links">
+      </div>
+
+      <div class="place" id="workshop">
+        <img src="assets/img/werkplaats.png" alt="Werkplaats" class="place-image">
+        <p class="place-body">Werkplaats</p>
+      </div>
+      <div class="place" id="garden">
+        <img src="assets/img/tuin.png" alt="Tuin" class="place-image">
+        <p class="place-body">Tuin</p>
+      </div>
+      <div class="place" id="library">
+        <img src="assets/img/bib.png" alt="Bibliotheek" class="place-image">
+        <p class="place-body">Bibliotheek</p>
+      </div>
+      <div class="place" id="living-room">
+        <img src="assets/img/living.png" alt="Leefruimte" class="place-image">
+        <p class="place-body">Leefruimte</p>
+      </div>
+
+      <div class="pijlen-interaction">
+        <img src="assets/img/pijl-rechts.svg" alt="Volgende" id="next-btn" class="pijl-btn pijk-rechts">
+      </div>
+    </div>
+
+    <div class="buttons-container">
+      <img src="assets/img/button.svg" alt="Selecteer" id="select-btn" class="select-btn">
+
+      <div id="result" class="result">
+        <p id="result-text"></p>
+        <img src="assets/img/retry-btn.svg" alt="Probeer opnieuw" id="retry-btn" class="retry-btn"
+          style="display:none;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter4 section" id="chapter4">
   <div class="chapter4__container">
     <div class="chapter4__header">
-      <img src="assets/img/maan.png" alt="maan" class="chapter4__maan-img">
+      <img class="chapter4__maan-img" src="assets/img/maan.png" alt="Maan">
       <h2 class="chapter4__title">De vlucht naar Parijs</h2>
     </div>
 
@@ -322,7 +441,18 @@
         In het holst van de nacht, met slechts een kleine zak vol manuscripten en gereedschap, vertrok Plantijn uit
         Antwerpen.
       </p>
-      <img src="assets/img/zak.png" alt="zak" class="chapter4__zak-img">
+      <picture class="chapter4__zak-img">
+        <img class="chapter4__zak-img" sizes="(max-width: 522px) 100vw, 522px" srcset="
+      assets/img/zak/zak_cqa9ou_c_scale,w_200.avif 200w,
+      assets/img/zak/zak_cqa9ou_c_scale,w_260.avif 260w,
+      assets/img/zak/zak_cqa9ou_c_scale,w_312.avif 312w,
+      assets/img/zak/zak_cqa9ou_c_scale,w_354.avif 354w,
+      assets/img/zak/zak_cqa9ou_c_scale,w_395.avif 395w,
+      assets/img/zak/zak_cqa9ou_c_scale,w_435.avif 435w,
+      assets/img/zak/zak_cqa9ou_c_scale,w_475.avif 475w,
+      assets/img/zak/zak_cqa9ou_c_scale,w_512.avif 512w,
+      assets/img/zak/zak_cqa9ou_c_scale,w_522.avif 522w" src="zak_cqa9ou_c_scale,w_522.avif" alt="">
+      </picture>
       <div class="chapter4__text-group">
         <p class="chapter4__body-2">
           Hij keek achterom naar zijn drukkerij, een plek die hij met liefde en hard werk had opgebouwd, en voelde zijn
