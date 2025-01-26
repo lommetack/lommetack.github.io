@@ -20,13 +20,16 @@ document.querySelector('.gallery').scrollIntoView({ behavior: 'smooth' });
 });
 
 lucifer.addEventListener('click', () => {
-    kandelaar.src = "assets/img/kandelaar-light/kandelaar-light_gjzvss_c_scale_w_420.avif";
+    kandelaar.src = "/assets/img/kandelaar-light/kandelaar-light_gjzvss_c_scale_w_420.avif";
     kandelaar.srcset = `
-    assets/img/kandelaar-light/kandelaar-light_gjzvss_c_scale_w_200.avif 200w,
-    assets/img/kandelaar-light/kandelaar-light_gjzvss_c_scale_w_358.avif 358w,
-    assets/img/kandelaar-light/kandelaar-light_gjzvss_c_scale_w_420.avif 420w
+    /assets/img/kandelaar-light/kandelaar-light_gjzvss_c_scale_w_200.avif 200w,
+    /assets/img/kandelaar-light/kandelaar-light_gjzvss_c_scale_w_358.avif 358w,
+    /assets/img/kandelaar-light/kandelaar-light_gjzvss_c_scale_w_420.avif 420w
   `;
 });
+
+
+
 
 const sections = document.querySelectorAll('.section');
 
@@ -153,7 +156,7 @@ overlay.style.top = '0';
 overlay.style.left = '10%';
 overlay.style.width = '80%';
 overlay.style.height = '100%';
-overlay.style.backgroundImage = 'url("assets/img/perkament-tekst.png")'; 
+overlay.style.backgroundImage = 'url("/assets/img/perkament-tekst.png")';
 overlay.style.backgroundSize = 'cover';
 overlay.style.opacity = '0'; 
 overlay.style.pointerEvents = 'none'; 

@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "GiordanoGold";
-  src: url('../assets/font/GiordanoGold\ Serif.woff2') format('woff2');
+  src: url('/public/GiordanoGold\ Serif.woff2');
   font-weight: 700;
   font-style: normal;
 }
@@ -94,7 +94,8 @@ img,picture {
 }
 
 body {
-  background: var(--c-background) url('assets/img/behang.svg') repeat;
+  background: var(--c-background)repeat;
+  background-image: url('/public/assets/img/behang.svg');
   color: var(--c-black);
   line-height: 1.6;
   margin-block: 16px 0;
@@ -137,7 +138,7 @@ p {
 }
 
 .intro{
-  background-image: url('assets/img/kraag-mobile.png');
+  background-image: url('/public/assets/img/kraag-mobile.png');
 }
 
 .header__container {
@@ -727,7 +728,7 @@ text-align: center;
 .footer {
   padding: 2rem;
   background-color: var(--c-blue);
-  background-image: url('assets/img/footer-border.svg') no-repeat center;
+  background-image: url('integration3/assets/img/footer-border.svg') no-repeat center;
   background-size: auto;
 }
 
@@ -947,7 +948,7 @@ body{
 }
 
 .intro {
-  background-image: url('assets/img/kraag-desktop.png');
+  background-image: url('integration3/assets/img/kraag-desktop.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1858,7 +1859,7 @@ body {
 }
 
 .intro {
-  background-image: url('assets/img/kraag-desktop.png');
+  background-image: url('integration3/assets/img/kraag-desktop.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
